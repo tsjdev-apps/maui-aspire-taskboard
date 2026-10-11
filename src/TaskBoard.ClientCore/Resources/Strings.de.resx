@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AppTitle" xml:space="preserve"><value>TaskBoard</value></data>
+  <data name="Tasks" xml:space="preserve"><value>Aufgaben</value></data>
+  <data name="Diagnostics" xml:space="preserve"><value>Diagnose</value></data>
+  <data name="BoardSubtitle" xml:space="preserve"><value>Jeden Tag ein kleiner Fortschritt.</value></data>
+  <data name="AddTask" xml:space="preserve"><value>Aufgabe hinzufügen</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Aktualisieren</value></data>
+  <data name="Edit" xml:space="preserve"><value>Bearbeiten</value></data>
+  <data name="Delete" xml:space="preserve"><value>Löschen</value></data>
+  <data name="Complete" xml:space="preserve"><value>Erledigungsstatus ändern</value></data>
+  <data name="Completed" xml:space="preserve"><value>Erledigt</value></data>
+  <data name="Incomplete" xml:space="preserve"><value>Offen</value></data>
+  <data name="EmptyTitle" xml:space="preserve"><value>Dein Board ist leer</value></data>
+  <data name="EmptyDescription" xml:space="preserve"><value>Füge eine Aufgabe hinzu, um loszulegen.</value></data>
+  <data name="LastSync" xml:space="preserve"><value>Zuletzt synchronisiert</value></data>
+  <data name="NeverSynced" xml:space="preserve"><value>Noch nicht synchronisiert</value></data>
+  <data name="EditorTitle" xml:space="preserve"><value>Aufgabe bearbeiten</value></data>
+  <data name="TitleLabel" xml:space="preserve"><value>Titel</value></data>
+  <data name="TitlePlaceholder" xml:space="preserve"><value>Was gibt es zu tun?</value></data>
+  <data name="DescriptionLabel" xml:space="preserve"><value>Beschreibung</value></data>
+  <data name="DescriptionPlaceholder" xml:space="preserve"><value>Weitere Details (optional)</value></data>
+  <data name="Save" xml:space="preserve"><value>Speichern</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Abbrechen</value></data>
+  <data name="TitleHint" xml:space="preserve"><value>Ein Titel ist erforderlich (maximal 120 Zeichen).</value></data>
+  <data name="DeleteTitle" xml:space="preserve"><value>Aufgabe löschen?</value></data>
+  <data name="DeleteQuestion" xml:space="preserve"><value>„{0}“ löschen?</value></data>
+  <data name="DiagnosticsSubtitle" xml:space="preserve"><value>Verfolge eine Anfrage von dieser App bis zur API im Aspire-Dashboard.</value></data>
+  <data name="NormalRequest" xml:space="preserve"><value>Normale Anfrage</value></data>
+  <data name="SlowRequest" xml:space="preserve"><value>Langsame Anfrage (1,5 s)</value></data>
+  <data name="TimeoutRequest" xml:space="preserve"><value>Zeitüberschreitung (5 s)</value></data>
+  <data name="FailureRequest" xml:space="preserve"><value>HTTP 503 simulieren</value></data>
+  <data name="Duration" xml:space="preserve"><value>Dauer (ms)</value></data>
+  <data name="Connected" xml:space="preserve"><value>Netzwerk verfügbar</value></data>
+  <data name="Disconnected" xml:space="preserve"><value>Netzwerk nicht verfügbar</value></data>
+  <data name="ConnectionHint" xml:space="preserve"><value>Eine Netzwerkverbindung garantiert nicht, dass die API erreichbar ist.</value></data>
+  <data name="DevelopmentOnly" xml:space="preserve"><value>Simulationen sind nur in Debug-Builds verfügbar.</value></data>
+  <data name="RequestSucceeded" xml:space="preserve"><value>Anfrage erfolgreich.</value></data>
+  <data name="RequestFailed" xml:space="preserve"><value>Anfrage fehlgeschlagen.</value></data>
+  <data name="RequestTimedOut" xml:space="preserve"><value>Zeitüberschreitung. Bitte erneut versuchen.</value></data>
+  <data name="RequestCanceled" xml:space="preserve"><value>Anfrage abgebrochen.</value></data>
+  <data name="ValidationError" xml:space="preserve"><value>Gib einen Titel mit maximal 120 und eine Beschreibung mit maximal 2000 Zeichen ein.</value></data>
+  <data name="UnexpectedError" xml:space="preserve"><value>Die Aktion konnte nicht abgeschlossen werden. Bitte erneut versuchen.</value></data>
+  <data name="InvalidApiResponse" xml:space="preserve"><value>Der Server hat eine ungültige Antwort geliefert. Deine bisherigen Daten bleiben erhalten. Bitte erneut versuchen.</value></data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve"><value>Der Dienst ist vorübergehend nicht verfügbar. Bitte kurz warten und erneut versuchen.</value></data>
+  <data name="StartupErrorTitle" xml:space="preserve"><value>Startfehler</value></data>
+  <data name="StartupErrorMessage" xml:space="preserve"><value>TaskBoard konnte nicht korrekt starten. Prüfe die Client-Konfiguration und starte die App erneut. Technische Details stehen in den Protokollen.</value></data>
+</root>
