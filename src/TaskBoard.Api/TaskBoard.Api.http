@@ -1,0 +1,38 @@
+@TaskBoard.Api_HostAddress = http://localhost:5243
+@TaskId = 00000000-0000-0000-0000-000000000001
+
+### List tasks
+GET {{TaskBoard.Api_HostAddress}}/api/tasks
+Accept: application/json
+
+### Read a task (replace TaskId with an ID from the list or create response)
+GET {{TaskBoard.Api_HostAddress}}/api/tasks/{{TaskId}}
+
+### Create a task
+POST {{TaskBoard.Api_HostAddress}}/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Try TaskBoard",
+  "description": "Find the request in the Aspire dashboard.",
+  "isCompleted": false
+}
+
+### Update and complete
+PUT {{TaskBoard.Api_HostAddress}}/api/tasks/{{TaskId}}
+Content-Type: application/json
+
+{
+  "title": "Try TaskBoard",
+  "description": "The trace is visible.",
+  "isCompleted": true
+}
+
+### Delete a task (replace TaskId with disposable test data)
+DELETE {{TaskBoard.Api_HostAddress}}/api/tasks/{{TaskId}}
+
+### Development diagnostics
+GET {{TaskBoard.Api_HostAddress}}/api/demo/slow?durationMs=1500
+
+###
+GET {{TaskBoard.Api_HostAddress}}/api/demo/fail
