@@ -89,4 +89,4 @@ This sample uses schema creation rather than migrations. After changing the mode
 
 Client tests use simple API/navigation doubles and real resilience handlers with controlled HTTP responses. API tests start the actual Minimal API with WebApplicationFactory and unique temporary SQLite files. Database pooling is disabled for those files; factories delete their own database after disposal.
 
-Tests never share the developer database, launch Aspire, or start emulators. Native packaging, XAML runtime interaction, device networking, tunnel authentication, and dashboard telemetry require the manual platform checks documented in [verification](verification.md).
+Tests never share the developer database, launch Aspire, or start emulators. Native packaging, XAML runtime interaction, device networking, tunnel authentication, and dashboard telemetry require the manual platform checks.

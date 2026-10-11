@@ -156,4 +156,4 @@ Preview MAUI hosting does not have complete Visual Studio integration. Use `Task
 
 Windows builds Windows and Android locally. macOS builds Android, iOS, and Mac Catalyst with compatible platform tooling. This sample does not configure remote Apple builds from Windows.
 
-Compilation does not establish device connectivity, UI behavior, or trace delivery. See [verification](verification.md) for precisely what was executed and the remaining platform checks.
+Compilation does not establish device connectivity, UI behavior, or trace delivery.

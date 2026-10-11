@@ -206,7 +206,7 @@ dotnet run --project src/TaskBoard.AppHost
 
 Use the dashboard's native resource Start command. Refresh tasks and locate the corresponding HTTP client/server spans. Use the Debug diagnostics page for normal, delayed, failed, and timed-out requests. Check backend warnings and retry attempts. Verify a standalone native launch still uses the conventional URL.
 
-A compiled host confirms API compatibility, while native runtime checks establish endpoint injection, certificate trust, emulator connectivity, and telemetry export. Treat these as separate validation steps; see [verification](verification.md).
+A compiled host confirms API compatibility, while native runtime checks establish endpoint injection, certificate trust, emulator connectivity, and telemetry export. Treat these as separate validation steps.
 
 ## Changed files checklist
 
