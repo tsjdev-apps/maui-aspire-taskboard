@@ -1,0 +1,16 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TaskBoard.Api/TaskBoard.Api.csproj" />
+    <Project Path="src/TaskBoard.AppHost/TaskBoard.AppHost.csproj" />
+    <Project Path="src/TaskBoard.ClientCore/TaskBoard.ClientCore.csproj" />
+    <Project Path="src/TaskBoard.Contracts/TaskBoard.Contracts.csproj" />
+    <Project Path="src/TaskBoard.Maui/TaskBoard.Maui.csproj" />
+    <Project Path="src/TaskBoard.MauiServiceDefaults/TaskBoard.MauiServiceDefaults.csproj" />
+    <Project Path="src/TaskBoard.ServiceDefaults/TaskBoard.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TaskBoard.Api.Tests/TaskBoard.Api.Tests.csproj" />
+    <Project Path="tests/TaskBoard.AppHost.Tests/TaskBoard.AppHost.Tests.csproj" />
+    <Project Path="tests/TaskBoard.ClientCore.Tests/TaskBoard.ClientCore.Tests.csproj" />
+  </Folder>
+</Solution>

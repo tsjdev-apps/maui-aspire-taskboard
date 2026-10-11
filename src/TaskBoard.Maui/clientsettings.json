@@ -1,0 +1,5 @@
+{
+  "TaskBoard": {
+    "ApiBaseUrl": "http://localhost:5243/"
+  }
+}

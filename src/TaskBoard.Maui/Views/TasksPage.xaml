@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskBoard.ClientCore.ViewModels;assembly=TaskBoard.ClientCore"
+             xmlns:contracts="clr-namespace:TaskBoard.Contracts;assembly=TaskBoard.Contracts"
+             xmlns:res="clr-namespace:TaskBoard.ClientCore.Resources;assembly=TaskBoard.ClientCore"
+             x:Class="TaskBoard.Maui.Views.TasksPage" x:Name="TasksRoot"
+             x:DataType="vm:TasksViewModel" Title="{x:Static res:Text.Tasks}">
+    <Grid Padding="20" RowDefinitions="Auto,Auto,Auto,*,Auto" RowSpacing="12"
+          MaximumWidthRequest="960" HorizontalOptions="Fill">
+        <VerticalStackLayout Spacing="6">
+            <Label Text="{x:Static res:Text.AppTitle}" Style="{StaticResource Heading}" />
+            <Label Text="{x:Static res:Text.BoardSubtitle}" Style="{StaticResource Secondary}" />
+            <FlexLayout Wrap="Wrap" JustifyContent="Start">
+                <Button Text="{x:Static res:Text.AddTask}" Command="{Binding AddCommand}" Margin="0,8,8,0" />
+                <Button Text="{x:Static res:Text.Refresh}" Command="{Binding LoadCommand}"
+                        Style="{StaticResource SecondaryButton}" Margin="0,8,0,0" />
+            </FlexLayout>
+        </VerticalStackLayout>
+        <Label Grid.Row="1" Text="{Binding ErrorMessage}" TextColor="{AppThemeBinding Light=#B91C1C, Dark=#FCA5A5}"
+               IsVisible="{Binding ErrorMessage, Converter={StaticResource HasText}}" />
+        <ActivityIndicator Grid.Row="2" IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+        <RefreshView Grid.Row="3" IsRefreshing="{Binding IsRefreshing}" Command="{Binding LoadCommand}">
+            <CollectionView ItemsSource="{Binding Tasks}" SelectionMode="None">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="12" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.EmptyView>
+                    <VerticalStackLayout Padding="24" Spacing="8">
+                        <Label Text="{x:Static res:Text.EmptyTitle}" FontSize="20" />
+                        <Label Text="{x:Static res:Text.EmptyDescription}" Style="{StaticResource Secondary}" />
+                    </VerticalStackLayout>
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="contracts:TaskDto">
+                        <Border Style="{StaticResource Card}">
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="{Binding Title}" FontFamily="OpenSansSemibold" FontSize="18" />
+                                <Label Text="{Binding Description}" LineBreakMode="WordWrap" />
+                                <Label Text="{Binding IsCompleted, Converter={StaticResource TaskStatus}}"
+                                       Style="{StaticResource Secondary}" />
+                                <FlexLayout Wrap="Wrap" x:DataType="{x:Null}">
+                                    <Button Text="{x:Static res:Text.Complete}" Margin="0,4,8,0"
+                                            Command="{Binding Source={x:Reference TasksRoot}, Path=BindingContext.ToggleCompleteCommand}"
+                                            CommandParameter="{Binding .}" />
+                                    <Button Text="{x:Static res:Text.Edit}" Style="{StaticResource SecondaryButton}" Margin="0,4,8,0"
+                                            Command="{Binding Source={x:Reference TasksRoot}, Path=BindingContext.EditCommand}"
+                                            CommandParameter="{Binding .}" />
+                                    <Button Text="{x:Static res:Text.Delete}" Style="{StaticResource SecondaryButton}" Margin="0,4,0,0"
+                                            Command="{Binding Source={x:Reference TasksRoot}, Path=BindingContext.DeleteCommand}"
+                                            CommandParameter="{Binding .}" />
+                                </FlexLayout>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+        <Label Grid.Row="4" Text="{Binding LastSynchronizedAt, Converter={StaticResource SyncTime}}" Style="{StaticResource Secondary}" />
+    </Grid>
+</ContentPage>

@@ -426,3 +426,23 @@ FodyWeavers.xsd
 
 # Official VS Code C# Dev Kit Extension exclusion
 #*.lscache
+
+# TaskBoard local data and development configuration
+**/App_Data/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite*
+**/clientsettings.local.json
+**/appsettings.Local.json
+**/appsettings.*.local.json
+.env
+.env.*
+.aspire/
+artifacts/
+*.pfx
+*.p12
+*.keystore
+*.mobileprovision
+.DS_Store
+._*

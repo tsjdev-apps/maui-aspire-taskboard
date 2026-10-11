@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms</value></resheader>
+  <data name="AppTitle" xml:space="preserve"><value>TaskBoard</value></data>
+  <data name="Tasks" xml:space="preserve"><value>Tasks</value></data>
+  <data name="Diagnostics" xml:space="preserve"><value>Diagnostics</value></data>
+  <data name="BoardSubtitle" xml:space="preserve"><value>A little progress, every day.</value></data>
+  <data name="AddTask" xml:space="preserve"><value>Add task</value></data>
+  <data name="Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Edit" xml:space="preserve"><value>Edit</value></data>
+  <data name="Delete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Complete" xml:space="preserve"><value>Toggle completion</value></data>
+  <data name="Completed" xml:space="preserve"><value>Completed</value></data>
+  <data name="Incomplete" xml:space="preserve"><value>To do</value></data>
+  <data name="EmptyTitle" xml:space="preserve"><value>Your board is clear</value></data>
+  <data name="EmptyDescription" xml:space="preserve"><value>Add a task to get started.</value></data>
+  <data name="LastSync" xml:space="preserve"><value>Last synchronized</value></data>
+  <data name="NeverSynced" xml:space="preserve"><value>Not synchronized yet</value></data>
+  <data name="EditorTitle" xml:space="preserve"><value>Task editor</value></data>
+  <data name="TitleLabel" xml:space="preserve"><value>Title</value></data>
+  <data name="TitlePlaceholder" xml:space="preserve"><value>What needs to be done?</value></data>
+  <data name="DescriptionLabel" xml:space="preserve"><value>Description</value></data>
+  <data name="DescriptionPlaceholder" xml:space="preserve"><value>Add a few details (optional)</value></data>
+  <data name="Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="TitleHint" xml:space="preserve"><value>A title is required (maximum 120 characters).</value></data>
+  <data name="DeleteTitle" xml:space="preserve"><value>Delete task?</value></data>
+  <data name="DeleteQuestion" xml:space="preserve"><value>Delete “{0}”?</value></data>
+  <data name="DiagnosticsSubtitle" xml:space="preserve"><value>Follow a request from this app to the API in the Aspire dashboard.</value></data>
+  <data name="NormalRequest" xml:space="preserve"><value>Normal request</value></data>
+  <data name="SlowRequest" xml:space="preserve"><value>Slow request (1.5 s)</value></data>
+  <data name="TimeoutRequest" xml:space="preserve"><value>Timeout demo (5 s)</value></data>
+  <data name="FailureRequest" xml:space="preserve"><value>Simulate HTTP 503</value></data>
+  <data name="Duration" xml:space="preserve"><value>Duration (ms)</value></data>
+  <data name="Connected" xml:space="preserve"><value>Network available</value></data>
+  <data name="Disconnected" xml:space="preserve"><value>Network unavailable</value></data>
+  <data name="ConnectionHint" xml:space="preserve"><value>Network availability does not guarantee that the API is reachable.</value></data>
+  <data name="DevelopmentOnly" xml:space="preserve"><value>Simulation controls are available in Debug builds only.</value></data>
+  <data name="RequestSucceeded" xml:space="preserve"><value>Request succeeded.</value></data>
+  <data name="RequestFailed" xml:space="preserve"><value>Request failed.</value></data>
+  <data name="RequestTimedOut" xml:space="preserve"><value>The request timed out. Please try again.</value></data>
+  <data name="RequestCanceled" xml:space="preserve"><value>Request canceled.</value></data>
+  <data name="ValidationError" xml:space="preserve"><value>Enter a title with at most 120 characters and a description with at most 2000 characters.</value></data>
+  <data name="UnexpectedError" xml:space="preserve"><value>The operation could not be completed. Please try again.</value></data>
+  <data name="InvalidApiResponse" xml:space="preserve"><value>The server returned an invalid response. Your previous data has been kept. Please try again.</value></data>
+  <data name="ServiceTemporarilyUnavailable" xml:space="preserve"><value>The service is temporarily unavailable. Please wait a moment and try again.</value></data>
+  <data name="StartupErrorTitle" xml:space="preserve"><value>Startup error</value></data>
+  <data name="StartupErrorMessage" xml:space="preserve"><value>TaskBoard could not start correctly. Check the client configuration and restart the app. Technical details are available in the logs.</value></data>
+</root>
