@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskBoard.ClientCore.ViewModels;assembly=TaskBoard.ClientCore"
+             xmlns:res="clr-namespace:TaskBoard.ClientCore.Resources;assembly=TaskBoard.ClientCore"
+             x:Class="TaskBoard.Maui.Views.DiagnosticsPage" x:DataType="vm:DiagnosticsViewModel"
+             Title="{x:Static res:Text.Diagnostics}">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="20" MaximumWidthRequest="700">
+            <Label Text="{x:Static res:Text.Diagnostics}" Style="{StaticResource Heading}" />
+            <Label Text="{x:Static res:Text.DiagnosticsSubtitle}" />
+            <Border Style="{StaticResource Card}">
+                <VerticalStackLayout Spacing="12">
+                    <Label Text="{Binding IsConnected, Converter={StaticResource ConnectionStatus}}" FontFamily="OpenSansSemibold" />
+                    <Label Text="{x:Static res:Text.ConnectionHint}" Style="{StaticResource Secondary}" />
+                    <Button Text="{x:Static res:Text.NormalRequest}" Command="{Binding NormalCommand}" />
+                    <VerticalStackLayout x:Name="SimulationControls" Spacing="12" IsVisible="False">
+                        <Button Text="{x:Static res:Text.SlowRequest}" Command="{Binding SlowCommand}" />
+                        <Button Text="{x:Static res:Text.TimeoutRequest}" Command="{Binding TimeoutCommand}" />
+                        <Button Text="{x:Static res:Text.FailureRequest}" Command="{Binding FailureCommand}" />
+                    </VerticalStackLayout>
+                    <Label Text="{x:Static res:Text.DevelopmentOnly}" Style="{StaticResource Secondary}" />
+                </VerticalStackLayout>
+            </Border>
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <Label Text="{x:Static res:Text.Duration}" />
+            <Label Text="{Binding DurationMilliseconds, StringFormat='{0:F0}'}" FontSize="24" />
+            <Label Text="{Binding ResultMessage}" />
+            <Label Text="{Binding ErrorMessage}" TextColor="{AppThemeBinding Light=#B91C1C, Dark=#FCA5A5}"
+                   IsVisible="{Binding ErrorMessage, Converter={StaticResource HasText}}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

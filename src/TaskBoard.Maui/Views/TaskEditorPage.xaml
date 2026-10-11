@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TaskBoard.ClientCore.ViewModels;assembly=TaskBoard.ClientCore"
+             xmlns:res="clr-namespace:TaskBoard.ClientCore.Resources;assembly=TaskBoard.ClientCore"
+             x:Class="TaskBoard.Maui.Views.TaskEditorPage" x:DataType="vm:TaskEditorViewModel"
+             Title="{x:Static res:Text.EditorTitle}">
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="16" MaximumWidthRequest="700">
+            <Label Text="{x:Static res:Text.EditorTitle}" Style="{StaticResource Heading}" />
+            <Label Text="{x:Static res:Text.TitleLabel}" />
+            <Entry Text="{Binding Title}" MaxLength="120" Placeholder="{x:Static res:Text.TitlePlaceholder}"
+                   SemanticProperties.Description="{x:Static res:Text.TitleLabel}" />
+            <Label Text="{x:Static res:Text.TitleHint}" Style="{StaticResource Secondary}" />
+            <Label Text="{x:Static res:Text.DescriptionLabel}" />
+            <Editor Text="{Binding Description}" MaxLength="2000" AutoSize="TextChanges" MinimumHeightRequest="140"
+                    Placeholder="{x:Static res:Text.DescriptionPlaceholder}"
+                    SemanticProperties.Description="{x:Static res:Text.DescriptionLabel}" />
+            <HorizontalStackLayout Spacing="12">
+                <Switch IsToggled="{Binding IsCompleted}" SemanticProperties.Description="{x:Static res:Text.Completed}" />
+                <Label Text="{x:Static res:Text.Completed}" VerticalOptions="Center" />
+            </HorizontalStackLayout>
+            <Label Text="{Binding ErrorMessage}" TextColor="{AppThemeBinding Light=#B91C1C, Dark=#FCA5A5}"
+                   IsVisible="{Binding ErrorMessage, Converter={StaticResource HasText}}" />
+            <ActivityIndicator IsRunning="{Binding IsBusy}" IsVisible="{Binding IsBusy}" />
+            <FlexLayout Wrap="Wrap">
+                <Button Text="{x:Static res:Text.Save}" Command="{Binding SaveCommand}" Margin="0,0,12,0" />
+                <Button Text="{x:Static res:Text.Cancel}" Command="{Binding CancelCommand}" Style="{StaticResource SecondaryButton}" />
+            </FlexLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

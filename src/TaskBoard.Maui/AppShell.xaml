@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:res="clr-namespace:TaskBoard.ClientCore.Resources;assembly=TaskBoard.ClientCore"
+       x:Class="TaskBoard.Maui.AppShell" FlyoutBehavior="Disabled">
+    <TabBar>
+        <ShellContent x:Name="TasksContent" Title="{x:Static res:Text.Tasks}" Route="tasks" />
+        <ShellContent x:Name="DiagnosticsContent" Title="{x:Static res:Text.Diagnostics}" Route="diagnostics" />
+    </TabBar>
+</Shell>
